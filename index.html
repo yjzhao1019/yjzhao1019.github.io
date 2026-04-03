@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Yujian Zhao 赵宇健</title>
+
+    <meta name="author" content="Yujian Zhao">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="images\personal\icon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+
+<style>
+  .hidden { display: none; }
+</style>
+<script>
+  function showPubs(id) {
+    if (id == 0) {
+      document.getElementById('pubs_selected').classList.remove('hidden');
+      document.getElementById('pubs_by_date').classList.add('hidden');
+      document.getElementById('select0').style = 'text-decoration:underline;';
+      document.getElementById('select1').style = '';
+    } else {
+      document.getElementById('pubs_selected').classList.add('hidden');
+      document.getElementById('pubs_by_date').classList.remove('hidden');
+      document.getElementById('select1').style = 'text-decoration:underline;';
+      document.getElementById('select0').style = '';
+    }
+    sessionStorage.setItem('activeTab', id);
+  }
+  window.addEventListener('DOMContentLoaded', function() {
+    var activeTab = sessionStorage.getItem('activeTab');
+    if (activeTab === null) activeTab = 1;
+    showPubs(parseInt(activeTab, 10));
+  });
+</script>
+
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Yujian Zhao
+                </p>
+                <p>
+		I'm currently a PhD student in Artificial Intelligence at <a href="https://ev.buaa.edu.cn/">Beihang University</a>, advised by Prof. Bo Li and Assistance Prof. Gaunglin Niu.
+                </p>
+                <p>
+    My research interests focus on Re-Identification and AIGC (diffusion models and 3DGS).
+                </p>
+                <p>
+                <p style="text-align:center">
+                  <a href="mailto:yjzhao1019@buaa.edu.cn">Email</a> &nbsp;/&nbsp;
+                  <a href="https://scholar.google.com/citations?user=lMXzUhAAAAAJ&hl=zh-CN">Scholar</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/yjzhao1019/">Github</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:37%;max-width:37%">
+                <a href="images\personal\yujian_zhao_1.jpg"><img style="width:75%;max-width:75%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/personal/yujian_zhao_1.jpg" class="hoverZoomLink"></a>
+              </td>
+            </tr>
+          </tbody></table>
+          
+          <!-- Publications heading with two buttons -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>
+                    Publications 
+                  </heading>
+                  &nbsp;(<a href="javascript:showPubs(0)" id="select0">show selected</a> / 
+                  <a href="javascript:showPubs(1)" id="select1">show all</a>)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="pubs"></div>
+
+          <div id="pubs_selected" class="hidden">
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+
+            <!-- MOS -->
+            <tr>
+              <td style="padding:15px;width:25%;vertical-align:middle">
+                <img src='images/MOS.png' width=100% alt="">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2512.03404">
+                  <span class="papertitle">MOS: Mitigating Optical-SAR Modality Gap for Cross-Modal Ship Re-Identification</span>
+                </a>
+                <br>
+                <strong>Yujian Zhao</strong>,
+                Hankun Liu,                
+                Guanglin Niu,
+                <br>
+                <em>CVPR Main</em>, 2026 (<strong>CCF-A</strong>)
+                <br>
+                <a href="https://arxiv.org/abs/2512.03404">Paper</a>
+                /
+                <a href="https://github.com/yjzhao1019/MOS">Code</a>
+                <p>
+              </td>
+            </tr>
+            
+            <!-- Try harder -->
+            <tr>
+              <td style="padding:15px;width:25%;vertical-align:middle">
+                <img src='images/Try_harder.png' width=100% alt="">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://dl.acm.org/doi/abs/10.1145/3746027.3755394">
+                  <span class="papertitle">Try Harder: Hard Sample Generation and Learning for Cloth-Changing Person Re-ID</span>
+                </a>
+                <br>
+                Hankun Liu*,
+                <strong>Yujian Zhao*</strong>,                
+                Guanglin Niu,
+                <br>
+                <em>ACM MM</em>, 2025 (<strong>CCF-A</strong>)
+                <br>
+                <a href="https://dl.acm.org/doi/abs/10.1145/3746027.3755394">Paper</a>
+                /
+                <a href="https://github.com/undooo/TryHarder-ACMMM25">Code</a>
+                <p>
+              </td>
+            </tr>
+
+            <!-- CCUP -->
+            <tr>
+              <td style="padding:15px;width:25%;vertical-align:middle">
+                <img src='images/CCUP.png' width=100% alt="">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://ieeexplore.ieee.org/document/11209188/">
+                  <span class="papertitle">CCUP: A Controllable Synthetic Data Generation Pipeline for Pretraining Cloth-Changing Person Re-Identification Models</span>
+                </a>
+                <br>
+                <strong>Yujian Zhao</strong>,                
+                Chengru Wu,
+                Yinong Xu,
+                Xuanzheng Du,
+                Ruiyu Li,
+                Guanglin Niu,
+                <br>
+                <em>ICME (oral)</em>, 2025 (<strong>CCF-B</strong>)
+                <br>
+                <a href="https://ieeexplore.ieee.org/document/11209188/">Paper</a>
+                /
+                <a href="https://github.com/yjzhao1019/CCUP">Code</a>
+                <p>
+              </td>
+            </tr>
+
+
+          </tbody></table>
+          </div>
+
+          <div id="pubs_by_date" class="hidden">
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <!-- MOS -->
+            <tr>
+              <td style="padding:15px;width:25%;vertical-align:middle">
+                <img src='images/MOS.png' width=100% alt="">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2512.03404">
+                  <span class="papertitle">MOS: Mitigating Optical-SAR Modality Gap for Cross-Modal Ship Re-Identification</span>
+                </a>
+                <br>
+                <strong>Yujian Zhao</strong>,
+                Hankun Liu,                
+                Guanglin Niu,
+                <br>
+                <em>CVPR Main</em>, 2026 (<strong>CCF-A</strong>)
+                <br>
+                <a href="https://arxiv.org/abs/2512.03404">Paper</a>
+                /
+                <a href="https://github.com/yjzhao1019/MOS">Code</a>
+                <p>
+              </td>
+            </tr>
+            
+            <!-- Try harder -->
+            <tr>
+              <td style="padding:15px;width:25%;vertical-align:middle">
+                <img src='images/Try_harder.png' width=100% alt="">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://dl.acm.org/doi/abs/10.1145/3746027.3755394">
+                  <span class="papertitle">Try Harder: Hard Sample Generation and Learning for Cloth-Changing Person Re-ID</span>
+                </a>
+                <br>
+                Hankun Liu*,
+                <strong>Yujian Zhao*</strong>,                
+                Guanglin Niu,
+                <br>
+                <em>ACM MM</em>, 2025 (<strong>CCF-A</strong>)
+                <br>
+                <a href="https://dl.acm.org/doi/abs/10.1145/3746027.3755394">Paper</a>
+                /
+                <a href="https://github.com/undooo/TryHarder-ACMMM25">Code</a>
+                <p>
+              </td>
+            </tr>
+
+            <!-- CCUP -->
+            <tr>
+              <td style="padding:15px;width:25%;vertical-align:middle">
+                <img src='images/CCUP.png' width=100% alt="">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://ieeexplore.ieee.org/document/11209188/">
+                  <span class="papertitle">CCUP: A Controllable Synthetic Data Generation Pipeline for Pretraining Cloth-Changing Person Re-Identification Models</span>
+                </a>
+                <br>
+                <strong>Yujian Zhao</strong>,                
+                Chengru Wu,
+                Yinong Xu,
+                Xuanzheng Du,
+                Ruiyu Li,
+                Guanglin Niu,
+                <br>
+                <em>ICME (oral)</em>, 2025 (<strong>CCF-B</strong>)
+                <br>
+                <a href="https://ieeexplore.ieee.org/document/11209188/">Paper</a>
+                /
+                <a href="https://github.com/yjzhao1019/CCUP">Code</a>
+                <p>
+              </td>
+            </tr>
+
+            <!-- MTRL -->
+            <tr>
+              <td style="padding:15px;width:25%;vertical-align:middle">
+                <img src='images/MTRL.png' width=100% alt="">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2511.02685/">
+                  <span class="papertitle">Modality-Transition Representation Learning for Visible-Infrared Person Re-Identification</span>
+                </a>
+                <br>
+                Chao Yuan, Zanwu Liu, Guiwei Zhang, Haoxuan Xu,  
+                <strong>Yujian Zhao</strong>,    
+                Guanglin Niu, Bo Li            
+                <br>
+                <em>arxiv</em>, 2025
+                <br>
+                <a href="https://arxiv.org/abs/2511.02685">Paper</a>
+                <!-- /
+                <a href="https://github.com/yjzhao1019/CCUP">Code</a> -->
+                <p>
+              </td>
+            </tr>
+
+
+
+          </tbody></table>
+          </div>
+
+          <!-- Awards -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>
+                    Selected Awards
+                  </heading>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:0px 20px 20px 20px;vertical-align:top">
+                  <ul style="margin:0;padding-left:20px;line-height:1.6;">
+                    <li>National Encouragement Scholarship, 2020-2021, and 2022-2023</li>
+                    <li>Outstanding Student Cadre of Beijing Municipality, 2022-2023</li>
+                    <li>Outstanding Graduate of Beijing Municipality, 2024</li>
+                    <li>First-Class Academic Scholarship for Graduate Students, Beihang University, 2025</li>
+                    <li>Special Prize of the Outstanding Counselor Scholarship, Beihang University, 2025</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Patents
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>
+                    Patents
+                  </heading>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:0px 20px 20px 20px;vertical-align:top">
+                  <ul style="margin:0;padding-left:20px;line-height:1.6;">
+                    <li>Invention Patent (Granted), China. "Dual-Arm Robot Control Method and Dual-Arm Robot." Patent No. ZL20251075052.1, Granted Oct. 24, 2025.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table> -->
+
+          <table style="width:100%;border:0px;border-spacing:0px;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:0px">
+                  <br>
+                  <p style="text-align:right;font-size:small;">
+                    Thank <a href="https://jonbarron.info/">Jon Barron</a> for sharing his website's 
+                    <a href="https://github.com/jonbarron/website">source code</a>.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
